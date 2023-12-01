@@ -1,17 +1,18 @@
 function generateHashtag(str) {
   let slowa = str.split(" ");
   let wynik = "#";
-  if (slowa > 140 || str === 0) {
-    return false;
-  }
-  for (let i = 0; i < slowa.count; i++) {
-    for (let j = 0; j < slowa[j].lenght; j++) {
+  let nowaTablica = slowa.map(function (x) {
+    for (let j = 0; j < x.length; j++) {
       if (j === 0) {
-        wynik += slowa[j].toUpperCase();
+        wynik += x[j].toUpperCase();
       } else {
-        wynik += slowa[j];
+        wynik += x[j];
       }
     }
+  });
+  if (wynik.length > 140 || str == 0) {
+    return false;
+  } else {
+    return wynik;
   }
-  return wynik;
 }
