@@ -23,5 +23,7 @@ const judgeCircle = function(moves)
     return X===0 && Y ===0
 
 };
-const moves1 = "RL"
+const moves1 = "RLUDDD"
+const moves2 = "LLRR"
 console.log(judgeCircle(moves1))
+console.log(judgeCircle(moves2))
