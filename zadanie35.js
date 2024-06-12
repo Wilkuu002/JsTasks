@@ -1,7 +1,7 @@
 function sortArray(array) {
     let nieparzysteTablica = array
         .map((value,index)=>({value,index}))
-        .filter(item => item.value % 2 !== 0)
+        .filter(item => item.value % 2)
         .sort((a,b)=>a.value-b.value)
     let idexNieparzysta=0
 
